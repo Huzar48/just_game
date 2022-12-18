@@ -30,18 +30,28 @@ void Beeing::update()
 
 void Beeing::draw(sf::RenderWindow& app)
 {
-    sf::Texture player_texture;
-    player_texture.loadFromFile(PLAYER_TEXTURE);
-    sf::Sprite plr(player_texture);
-    plr.setScale(0.2f, 0.2f);
+    //sf::Texture player_texture;
+    //player_texture.loadFromFile(PLAYER_TEXTURE);
+    sf::Sprite entity(tex);  
+    //plr.setScale(0.2f, 0.2f);
 
-//    anim.sprite->setPosition(this->x, this->y);
-  //  anim.sprite->setRotation(this->angle + 90);
- //   app.draw(*anim.sprite);
+    //anim.sprite->setPosition(this->x, this->y);
+    //anim.sprite->setRotation(this->angle + 90);
+    //app.draw(*anim.sprite);
+  
+    entity.setPosition(this->x, this->y);
+    entity.setScale(0.25f, 0.25f);
+    sf::Vector2u textureSize = tex.getSize();
+    entity.setOrigin(textureSize.x/2,textureSize.y/2);
+    entity.rotate(this->angle);
+    sf::Vector2f velocity(10.f, 0.f);
+    app.draw(entity);
 
-  //  CircleShape circle(this->R);
-  //  circle.setFillColor(Color(255, 0, 0, 170));
-    plr.setPosition(this->x, this->y);
-    plr.setOrigin(this->R, this->R);
-    app.draw(plr);
+    //CircleShape circle(this->R);
+    //circle.setFillColor(Color(255, 0, 0, 170));
+    //plr.setPosition(this->x, this->y);
+    //plr.setOrigin(this->R, this->R);
+    //app.draw(plr);
 }
+
+Beeing::~Beeing() {};

@@ -18,17 +18,20 @@
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp">
-      <Filter>Pliki zasobów</Filter>
-    </ClCompile>
-    <ClCompile Include="Beeing.cpp">
-      <Filter>Pliki zasobów</Filter>
+    <ClCompile Include="bullet.cpp">
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Pliki zasobów</Filter>
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Beeing.cpp">
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Animation.cpp">
-      <Filter>Pliki zasobów</Filter>
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +48,9 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Animation.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>

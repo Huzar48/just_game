@@ -18,8 +18,8 @@ void Player::update()
 {
     if (thrust)
     {
-        this->dx += cos(angle * DEGTORAD) * 0.2;
-        this->dy += sin(angle * DEGTORAD) * 0.2;
+        this->dx += cos(this->angle * DEGTORAD) * 0.2;
+        this->dy += sin(this->angle * DEGTORAD) * 0.2;
     }
     else
     {
@@ -28,7 +28,7 @@ void Player::update()
     }
 
     int maxSpeed = 15;
-    float speed = sqrt(dx * dx + dy * dy);
+    float speed = sqrt(this->dx * this->dx + this->dy * this->dy);
     if (speed > maxSpeed)
     {
         this->dx *= maxSpeed / speed;
@@ -38,6 +38,7 @@ void Player::update()
     this->x += this->dx;
     this->y += this->dy;
 
-    if (x > RES_X) x = 0; if (x < 0) x = RES_X;
-    if (y > RES_Y) y = 0; if (y < 0) y = RES_Y;
+
+    if (this->x > RES_X) this->x = 0; if (this->x < 0) this->x = RES_X;
+    if (this->y > RES_Y) this->y = 0; if (this->y < 0) this->y = RES_Y;
 }

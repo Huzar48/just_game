@@ -25,4 +25,8 @@
 #define BULLET_TEXTURE "bullet.png"
 #define PROJECT_OWNER "P.HUZAR"
 
+////////Texture scales////////
+#define player_scale 0.25f
+#define bullet_scale 0.5f
+
 #endif

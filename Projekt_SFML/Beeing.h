@@ -21,6 +21,7 @@ public:
 	void settings(Animation&, int, int, float, int);
 	virtual void update();
 	void draw(sf::RenderWindow&);
+	virtual ~Beeing();
 
 };
 #endif

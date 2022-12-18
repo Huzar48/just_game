@@ -3,6 +3,7 @@
 #include "game.h"
 #include "settings.h"
 #include "Player.h"
+#include "bullet.h"
 #include <vector>
 
 using namespace std;
@@ -23,9 +24,9 @@ int main() {
 
 
 	//Animation sRock(meteor_texture, 0, 0, 64, 64, 16, 0.2);
-	//Animation sBullet(bullet_texture, 0, 0, 32, 64, 16, 0.8);
+	Animation sBullet(bullet_texture, 0, 0, 32, 64, 16, 0.8);
 	Animation sPlayer(player_texture, 40, 0, 40, 40, 1, 0);
-	Animation sPlayer_go(player_texture, 40, 40, 40, 40, 1, 0);
+	//Animation sPlayer_go(player_texture, 40, 40, 40, 40, 1, 0);
 
 	/////////////Antyaliassing///////////
 	player_texture.setSmooth(true);
@@ -59,16 +60,18 @@ int main() {
 	plr.setScale(0.25f, 0.25f);
 	plr.setPosition(RES_X/2, RES_Y/2);
 
-	Player* p = new Player("player", PLAYER_TEXTURE);
-	p->settings(sPlayer, 950, 480, 0, 20);
 	std::list<Beeing*> beeings;
-	beeings.push_back(p);
 
+	Player* p = new Player("player", PLAYER_TEXTURE);
+	p->settings(sPlayer, RES_X/2, RES_Y/2, 0, 20);
+	beeings.push_back(p);
+	
 	while (app.isOpen()) {
-		
+		app.setActive(true);
+		app.setVisible(true);
+
 		//close aplication if user press the escape button
 		Event event;
-		Event exit;
 
 		while (app.pollEvent(event))
 		{
@@ -81,38 +84,40 @@ int main() {
 				if (event.key.code == Keyboard::PLR_SHOOT)
 				{
 					cout << "Shoot" << endl;
-					//bullet* b = new bullet();
-					//b->settings(sBullet, p->x, p->y, p->angle, 10);
-					//.push_back(b);
+					Bullet* b = new Bullet("bullet", BULLET_TEXTURE);
+					b->settings(sBullet, p->x, p->y, p->angle, 10);
+					beeings.push_back(b);
 				}
 		}
 
 		if (Keyboard::isKeyPressed(Keyboard::PLR_UP)) {
 			cout << "Engine on" << endl;
+			p->y -= 3;
 			p->thrust = true;
 		}
 		else p->thrust = false;
 
-		if (p->thrust)  p->anim = sPlayer_go;
-		else   p->anim = sPlayer;
-
-		//	if (Keyboard::isKeyPressed(Keyboard::PLR_DOW)) {
-		//
-		//	}
+		if (Keyboard::isKeyPressed(Keyboard::PLR_DOW)) {
+			p->y += 3;
+		
+		}
 
 		if (Keyboard::isKeyPressed(Keyboard::PLR_RR)) {
 			cout <<"Rotate to Right"<< endl;
+			p->x += 3;
 			p->angle += 3;
 		}
 	
 		if (Keyboard::isKeyPressed(Keyboard::PLR_RL)) {
 			cout <<"Rotate to left"<< endl;
+			p->x -= 3;
 			p->angle -= 3;
 		}
 
-		app.setActive(true);
-		app.setVisible(true);
-		app.clear();
+		//if (p->thrust)  p->anim = sPlayer_go;
+		else   p->anim = sPlayer;
+
+		
 		app.draw(bckg);
 		//	app.draw(plr);
 		for (auto i : beeings) i->draw(app);

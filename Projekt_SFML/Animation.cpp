@@ -10,7 +10,7 @@ Animation::Animation(sf::Texture& t, int x, int y, int w, int h, int count, floa
         frames.push_back(sf::IntRect(x + i * w, y, w, h));
 
     this->sprite = new sf::Sprite(t);
- //   this->sprite.setTexture(t);
+    this->sprite->setTexture(t);
     this->sprite->setOrigin(w/ 2,h/ 2);
     this->sprite->setTextureRect(frames[0]);
 }
