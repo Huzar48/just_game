@@ -1,23 +1,22 @@
 #pragma once
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+
 
 #ifndef GAME_H
 #define GAME_H
 
-class Game{
-private:
-	sf::RenderWindow app_window;
+using namespace std;
+
+class Game {
 
 public:
-	void game();
+	static void game();
+	void Dt(float);
+	virtual ~Game();
+	sf::Clock dtClock;
+	float dt;
+	void updateDt();
 };
-
-//deklaracja okna
-
-//deklaracje tekstur 
-
-
-//deklaracja kamery
-
-
 
 #endif
