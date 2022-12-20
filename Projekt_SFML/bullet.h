@@ -6,6 +6,7 @@
 class Bullet: public Beeing
 {
 public:
+    Bullet(){};
     Bullet(std::string name, std::string tex);
     void  update();
     

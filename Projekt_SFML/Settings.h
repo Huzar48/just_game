@@ -23,10 +23,17 @@
 #define ENEMY_TEXTURE "enemy.png"
 #define METEOR_TEXTURE "meteor.png"
 #define BULLET_TEXTURE "bullet.png"
-#define PROJECT_OWNER "P.HUZAR"
+#define GAME_OVER "game_over.png"
+
+
+/////////paths to sounds///////
+#define MUSIC "music.wav"
+#define SHOOT "shot.wav"
 
 ////////Texture scales////////
 #define player_scale 0.25f
 #define bullet_scale 0.5f
 
+#define PROJECT_MADE_BY "P.HUZAR"
+#define SOUNDS_AND_MUSIC_MADE_BY "J.MA£YSKA"
 #endif

@@ -9,10 +9,18 @@
 class Player: public Beeing {
 
 public:
+	Player() {};
 	bool thrust;
+	bool Brakes;
+	float brakes;
+	float speed;
 	std::string name;
 	void update();
 	Player(std::string, std::string);
+
+	void draw(sf::RenderWindow&);
+		
+	void draw();
 
 };
 #endif
