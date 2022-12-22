@@ -12,7 +12,9 @@ class Beeing {
 public:
 
 	float x, y, dx, dy, R, angle, speed;
-	bool life;
+	int life;
+	int tpoints;
+	bool isAlive;
 	std::string name;
 	sf::Texture tex;
 	Beeing() {};

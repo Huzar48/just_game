@@ -139,18 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Beeing.cpp" />
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="Meteor.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="bullet.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Beeing.h" />
+    <ClInclude Include="GameOver.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Meteor.h" />
     <ClInclude Include="Player.h" />

@@ -10,7 +10,7 @@ using namespace sf;
 Beeing::Beeing(std::string tex_path)
 {   
     this->tex.loadFromFile(tex_path);
-	this->life = 1;
+	this->isAlive = true;
 }
 
 void Beeing::settings(int X, int Y, float Angle, int radius, int Speed)
@@ -41,6 +41,7 @@ void Beeing::draw(sf::RenderWindow& app)
         entity.setOrigin(textureSize.x / 2, textureSize.y / 2);
         entity.setPosition(this->x, this->y);
         entity.rotate(this->angle+90);
+
         app.draw(entity);
     
 

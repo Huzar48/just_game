@@ -13,6 +13,7 @@ Player::Player(std::string name, std::string tex) : Beeing(tex) {
     this->name = name;
     this->thrust = false;
     this->brakes = false;
+    this->life = 3;
 }
 
 
