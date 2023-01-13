@@ -42,12 +42,23 @@ bool Menu::menu()
 	mgrpg.setScale(1, 1);
 	mgrpg.setPosition(0, 0);
 
+	////////////TEXT////////////////
+	Font font;
+	font.loadFromFile(FONT);
+	Text menu_buttons;
+	menu_buttons.setFont(font);
+	menu_buttons.setCharacterSize(32);
+	menu_buttons.setFillColor(sf::Color::Yellow);
+	menu_buttons.setPosition(100, RES_Y - 100);
+	std::string menbuttons = "Press SPACE to start the game, or CLOSE WINDOW to exit";
+	menu_buttons.setString(menbuttons);
 
-		
+	//menu_window.clear();
+
 		while (menu_window.isOpen()) {
-
 		menu_window.setActive(true);
 		menu_window.setVisible(true);
+
 
 		//close aplication if user press the escape button
 		Event event;
@@ -68,11 +79,10 @@ bool Menu::menu()
 					return false;
 				}
 
-		menu_window.clear();
 		menu_window.draw(bckg); 
 		menu_window.draw(mgrpg);
+		menu_window.draw(menu_buttons);
 		menu_window.display();
-
 		}
 	}
 }

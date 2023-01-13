@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include <fstream>
 #include <list>
 #include "game.h"
 #include "settings.h"
@@ -36,6 +37,8 @@ bool isCollide(Beeing* a, Beeing* b)
 
  bool Game::game() {
 	srand(time(0));
+	std::ifstream inputFile("highscore.txt");
+	std::ofstream outputFile("highscore.txt");
 
 	////////////load textures///////////////
 	Texture background, player_texture, enemy_texture, bullet_texture, meteor_texture, game_over;
@@ -106,6 +109,8 @@ bool isCollide(Beeing* a, Beeing* b)
 
 	/////////////Beeings list///////////
 	std::list<Beeing*> beeings;
+	std::list<Beeing*> beeingsend;
+
 
 	Meteor* a=nullptr;
 	for (int i = 0; i < 15; i++)
@@ -119,7 +124,12 @@ bool isCollide(Beeing* a, Beeing* b)
 	p->settings(RES_X / 2, RES_Y / 2, 0, 20, p->speed);
 	beeings.push_back(p);
 
-	Game scr;
+
+	
+		inputFile >> p->highScore;
+		inputFile.close();
+
+
 	
 		while (app.isOpen()) {
 			app.setActive(true);
@@ -201,7 +211,11 @@ bool isCollide(Beeing* a, Beeing* b)
 							explosion.openFromFile(EXPLOSION);
 							explosion.play();
 							a->isAlive = false;
+							//beeings.remove(a);
+
 							b->isAlive = false;
+							//beeings.remove(b);
+
 
 							addpoints.setString("+100.pts");
 							p->score = p->score+100;
@@ -236,6 +250,7 @@ bool isCollide(Beeing* a, Beeing* b)
 							plr_explosion.play();
 
 							b->isAlive = false;
+							//beeings.remove(b);
 							p->life = p->life-1;
 
 							cout << "Yoy're loosing 1 life" << endl;
@@ -245,14 +260,38 @@ bool isCollide(Beeing* a, Beeing* b)
 							p->dx = 0; 
 							p->dy = 0;
 
+							if (p->score > p->highScore)
+							{
+
+								if (outputFile.is_open())
+								{
+									outputFile << p->highScore;
+									outputFile.close();
+								}
+
+							}
+
 								if (p->life < 1)
 								{
-									cout << "You Died!" << endl;
+									cout << "You're deaad!" << endl;
+									cout << "Your highScore is "<<p->highScore << endl;
 									cout << "Your score is "<<p->score << endl;
 									p->isAlive = false;
 									app.close();
 								}
 						}
+				}
+
+	
+				for (auto b : beeings) 
+				{
+					if (b->x > RES_X || b->x<0 || b->y>RES_Y || b->y < 0) 
+					{
+						b->life = 0;
+						//delete b;
+						//b = nullptr;
+					};
+
 				}
 
 				if (rand() % 150 == 0)
@@ -268,7 +307,7 @@ bool isCollide(Beeing* a, Beeing* b)
 
 					e->update();
 
-					if (e->isAlive == false) { i = beeings.erase(i); delete e; }
+					if (e->isAlive == false) { i = beeings.erase(i); delete e; e = nullptr; }
 					else i++;
 				}
 
@@ -289,6 +328,8 @@ bool isCollide(Beeing* a, Beeing* b)
 		
 
 			//	app.draw(plr);
+
+
 			for (auto i : beeings) i->draw(app);
 
 			app.display();

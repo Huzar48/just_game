@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <SFML/Graphics.hpp>
 #include "settings.h"
 #include "beeing.h"
@@ -14,6 +15,8 @@ Player::Player(std::string name, std::string tex) : Beeing(tex) {
     this->thrust = false;
     this->brakes = false;
     this->life = 3;
+
+    this->highScore = this->highScore;
 }
 
 

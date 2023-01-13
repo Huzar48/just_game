@@ -1,22 +1,21 @@
-﻿  Meteor.cpp
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\Meteor.cpp(10,27): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\Meteor.cpp(11,27): warning C4244: "=": konwersja z "int" do "float", możliwa utrata danych
+﻿  GameOver.cpp
+  bullet.cpp
   game.cpp
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(38,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(114,61): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(114,50): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(116,5): warning C4552: „!=”: Wynik wyrażenia nie jest używany
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(119,44): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(155,46): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(155,26): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(155,20): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(215,40): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(215,28): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(215,22): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(261,63): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
-C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(261,44): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(39,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(119,61): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(119,50): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(121,5): warning C4552: „!=”: Wynik wyrażenia nie jest używany
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(124,44): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(165,46): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(165,26): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(165,20): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(229,40): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(229,28): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(229,22): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(300,63): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(300,44): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
   Trwa generowanie kodu
-  0 of 239 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  0 of 314 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu

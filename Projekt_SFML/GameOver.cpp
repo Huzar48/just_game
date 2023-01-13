@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "game.h"
 #include "settings.h"
+#include <fstream>
 #include "menu.h"
 #include <iostream>
 
@@ -44,9 +45,34 @@ bool GameOver::gameOver()
 	bckg.setScale(1, 1);
 	bckg.setPosition(0, 0);
 
+	std::ifstream inputFile("highscore.txt");
+	std::ofstream outputFile("highscore.txt");
+
+	int score=0;
+		inputFile >> score;
+		inputFile.close();
 
 
+	////////////TEXT////////////////
+	Font font;
+	font.loadFromFile(FONT);
+	Text menu_buttons; //HighScore;
+	menu_buttons.setFont(font);
+	menu_buttons.setCharacterSize(32);
+	menu_buttons.setFillColor(sf::Color::Yellow);
+	menu_buttons.setPosition(250, RES_Y - 100);
+	std::string menbuttons = "Press SPACE to restart the game, or ESC to exit ";
+	menu_buttons.setString(menbuttons);
+
+	//HighScore.setFont(font);
+	//HighScore.setCharacterSize(32);
+	//HighScore.setFillColor(sf::Color::Yellow);
+	//HighScore.setPosition(250, RES_Y - 200);
+	//std::string HScore = "You're current HighScore is " + std::to_string(score);
+	//menu_buttons.setString(HScore);
+	
 	while (gover_window.isOpen()) {
+
 
 		gover_window.setActive(true);
 		gover_window.setVisible(true);
@@ -74,6 +100,8 @@ bool GameOver::gameOver()
 			gover_window.clear();
 			gover_window.draw(bckg);
 			gover_window.draw(gover);
+			gover_window.draw(menu_buttons);
+			//gover_window.draw(HighScore);
 			gover_window.display();
 
 		}

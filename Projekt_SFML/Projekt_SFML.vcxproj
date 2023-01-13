@@ -144,6 +144,7 @@
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="HighScore.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="Meteor.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="Beeing.h" />
     <ClInclude Include="GameOver.h" />
+    <ClInclude Include="HighScore.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="Meteor.h" />
     <ClInclude Include="Player.h" />

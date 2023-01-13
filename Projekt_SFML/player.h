@@ -14,7 +14,8 @@ public:
 	bool Brakes;
 	float brakes;
 	float speed;
-	int score = 0;
+	int score=0;
+	int highScore;
 	std::string name;
 	void update();
 	Player(std::string, std::string);

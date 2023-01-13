@@ -55,4 +55,7 @@ void Beeing::draw(sf::RenderWindow& app)
 
 
 
-Beeing::~Beeing() {};
+Beeing::~Beeing() 
+{
+    
+};
