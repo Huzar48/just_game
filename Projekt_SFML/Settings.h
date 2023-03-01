@@ -18,17 +18,22 @@
 #define EXIT Escape //Escape is only correct format of typing escape or escape won't work
 
 //////paths to textures////////
-#define BACKGROUND "background.png"
-#define PLAYER_TEXTURE "./player.png"
-#define ENEMY_TEXTURE "enemy.png"
-#define METEOR_TEXTURE "meteor.png"
-#define BULLET_TEXTURE "bullet.png"
-#define GAME_OVER "game_over.png"
+#define BACKGROUND "assets/background.png"
+#define PLAYER_TEXTURE "assets/player.png"
+#define ENEMY_TEXTURE "assets/enemy.png"
+#define METEOR_TEXTURE "assets/meteor.png"
+#define BULLET_TEXTURE "assets/bullet.png"
+#define GAME_OVER "assets/game_over.png"
+#define MENU "assets/menu.png"
 
+//////////FONTS///////////////
+#define FONT "fonts/PressStart2P-Regular.ttf"
 
 /////////paths to sounds///////
-#define MUSIC "music.wav"
-#define SHOOT "shot.wav"
+#define MUSIC "sounds/music.wav"
+#define SHOOT "sounds/shot.wav"
+#define EXPLOSION "sounds/explosion.wav"
+#define PLR_EXPLOSION "sounds/plr_explosion.wav"
 
 ////////Texture scales////////
 #define player_scale 0.25f

@@ -11,7 +11,8 @@ using namespace std;
 class Game {
 
 public:
-	static void game();
+	static bool game();
+	Game();
 	void Dt(float);
 	virtual ~Game();
 	sf::Clock dtClock;

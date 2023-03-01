@@ -19,4 +19,5 @@ void Bullet::update(){
     this->y += this->dy;
 
     if (this->x > RES_X || this->x<0 || this->y>RES_Y || this->y < 0) this->life = 0;
+
 }
