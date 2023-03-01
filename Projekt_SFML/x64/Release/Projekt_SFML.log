@@ -1,6 +1,4 @@
-﻿  GameOver.cpp
-  bullet.cpp
-  game.cpp
+﻿  game.cpp
 C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(39,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
 C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(119,61): warning C4244: "argument": konwersja z "float" do "int", możliwa utrata danych
 C:\Users\Test\Desktop\Programowanko\GitHub\just_game\Projekt_SFML\game.cpp(119,50): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych

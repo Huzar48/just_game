@@ -45,8 +45,8 @@ bool GameOver::gameOver()
 	bckg.setScale(1, 1);
 	bckg.setPosition(0, 0);
 
-	std::ifstream inputFile("highscore.txt");
-	std::ofstream outputFile("highscore.txt");
+	ifstream inputFile("highscore.txt");
+	ofstream outputFile("highscore.txt");
 
 	int score=0;
 		inputFile >> score;

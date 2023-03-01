@@ -37,8 +37,8 @@ bool isCollide(Beeing* a, Beeing* b)
 
  bool Game::game() {
 	srand(time(0));
-	std::ifstream inputFile("highscore.txt");
-	std::ofstream outputFile("highscore.txt");
+	ifstream inputFile("highscore.txt");
+	ofstream outputFile("highscore.txt");
 
 	////////////load textures///////////////
 	Texture background, player_texture, enemy_texture, bullet_texture, meteor_texture, game_over;
